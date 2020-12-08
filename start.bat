@@ -1,5 +1,5 @@
 @echo off
-cd ClickbaitGeneratorGui
+cd ClickbaitGenerator
 cd src
 javac ClickbaitGeneratorGui.java
 java ClickbaitGeneratorGui

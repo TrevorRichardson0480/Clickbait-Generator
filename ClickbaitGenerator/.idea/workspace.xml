@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dda51455-2285-4cbc-a84f-3545465eb968" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Epic-Team-Tuba-#108.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Epic-Team-Tuba-#1082.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SUBTLEXusrawdata.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mposp10.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1kZktmMhFvGEiT4uClkq6xducU1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClickbaitGeneratorGui" />
+      <module name="ClickbaitGeneratorGui" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dda51455-2285-4cbc-a84f-3545465eb968" name="Default Changelist" comment="" />
+      <created>1605915717188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605915717188</updated>
+      <workItem from="1605915718677" duration="9065000" />
+      <workItem from="1606260975082" duration="299000" />
+      <workItem from="1606261474197" duration="14806000" />
+      <workItem from="1606676572388" duration="4195000" />
+      <workItem from="1606689664265" duration="2510000" />
+      <workItem from="1606693142048" duration="911000" />
+      <workItem from="1606696236947" duration="655000" />
+      <workItem from="1606697051115" duration="200000" />
+      <workItem from="1606713018197" duration="157000" />
+      <workItem from="1606713473324" duration="49000" />
+      <workItem from="1606713882263" duration="1440000" />
+      <workItem from="1606715700496" duration="612000" />
+      <workItem from="1607393381519" duration="1222000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605919537327">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605919537327" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1606280064210">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606280064210" />
+    <state x="1103" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605919511299">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1103" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605919511299" />
+    <state width="916" height="354" key="GridCell.Tab.0.bottom" timestamp="1606715335219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="354" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335219" />
+    <state width="916" height="354" key="GridCell.Tab.0.center" timestamp="1606715335219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="354" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335219" />
+    <state width="916" height="354" key="GridCell.Tab.0.left" timestamp="1606715335219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="354" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335219" />
+    <state width="916" height="354" key="GridCell.Tab.0.right" timestamp="1606715335219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="354" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335219" />
+    <state width="916" height="239" key="GridCell.Tab.1.bottom" timestamp="1606715335216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="239" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335216" />
+    <state width="916" height="239" key="GridCell.Tab.1.center" timestamp="1606715335216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="239" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335216" />
+    <state width="916" height="239" key="GridCell.Tab.1.left" timestamp="1606715335216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="239" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335216" />
+    <state width="916" height="239" key="GridCell.Tab.1.right" timestamp="1606715335216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="916" height="239" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606715335216" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606715114766">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606715114766" />
+  </component>
+</project>
