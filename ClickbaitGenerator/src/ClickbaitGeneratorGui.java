@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import javafx.scene.control.Button;
 
@@ -20,15 +23,23 @@ public class ClickbaitGeneratorGui extends Application {
     int numTitles = 10;
 
 
-    public void start(Stage appStage) {
+    public void start(Stage appStage) throws IOException {
         // make the main grid, add the grid to the main scene
         GridPane mainGrid = new GridPane();
         Scene mainScene = new Scene(mainGrid);
 
         // text field
+        String output = "";
+        List<String> lines = Files.readAllLines(Paths.get("output/titles.txt"), StandardCharsets.US_ASCII);
+
+        while (!lines.isEmpty()) {
+            output += lines.remove(0) + "\n";
+        }
+
         TextArea outputField = new TextArea();
         outputField.setPrefColumnCount(20);
         outputField.setEditable(false);
+        outputField.setText(output);
 
         // create buttons
         Button clearBTN = new Button("Clear");
@@ -69,28 +80,14 @@ public class ClickbaitGeneratorGui extends Application {
                 execute.write("python YTAPI.py " + countryCode + " " + topic + "\n");
                 execute.close();
 
-                processCommandStage("wscript run.vbs", "../outputFiles", 20, appStage);
+                processCommandStage("wscript run.vbs", "../outputFiles", 20);
+                appStage.close();
+                return;
 
             } catch (IOException e) {
                 e.printStackTrace();
 
             }
-
-            // read all lines from output and print
-            /*try {
-                List<String> lines = Files.readAllLines(Paths.get("output.txt"), StandardCharsets.US_ASCII);
-                String output = "";
-
-                while (!lines.isEmpty()) {
-                    output += lines.remove(0);
-                }
-
-                outputField.setText(output);
-
-            } catch (IOException e) {
-                e.printStackTrace();
-
-            }*/
         });
 
         // display window
@@ -197,17 +194,17 @@ public class ClickbaitGeneratorGui extends Application {
     }
 
 
-    public void processCommandStage(String cmd, String lookingIn, int numLooking, Stage mainStage) throws IOException {
+    public void processCommandStage(String cmd, String lookingIn, int numLooking) throws IOException {
         final Task<Void> task = new Task<Void>() {
             File directory = new File(lookingIn);
             int numFiles = 0;
 
             protected Void call() throws Exception {
-                while(numFiles <= numLooking) {
+                while(numFiles < numLooking) {
                     numFiles = Objects.requireNonNull(directory.list()).length;
                     updateProgress(numFiles, numLooking);
                 }
-                
+
                 return null;
             }
         };
@@ -215,26 +212,93 @@ public class ClickbaitGeneratorGui extends Application {
         ProgressBar progress = new ProgressBar();
         progress.progressProperty().bind(task.progressProperty());
         ProgressIndicator loadingIndicator = new ProgressIndicator(-1.0);
+        
         Label loadingLabel = new Label("Loading...");
-        Label blankLabel = new Label(" ");
+        Label youTubeLabel = new Label("Connecting to YouTube...");
+        Label blankLabel = new Label("");
         blankLabel.setMinWidth(200);
 
         GridPane layout = new GridPane();
         layout.add(loadingIndicator, 0, 0);
         layout.add(loadingLabel, 0, 1);
-        layout.add(blankLabel, 0, 2);
-        layout.add(progress, 0, 3);
+        layout.add(youTubeLabel, 0, 2);
+        layout.add(blankLabel, 0, 3);
+        layout.add(progress, 0, 4);
         layout.setPadding(new Insets(10, 0, 0, 0));
         GridPane.setHalignment(loadingIndicator, HPos.CENTER);
         GridPane.setHalignment(loadingLabel, HPos.CENTER);
+        GridPane.setHalignment(youTubeLabel, HPos.CENTER);
         GridPane.setHalignment(progress, HPos.CENTER);
 
         Stage progressState = new Stage();
         progressState.setScene(new Scene(layout));
         progressState.setResizable(false);
-        progressState.initModality(Modality.WINDOW_MODAL);
-        progressState.initOwner(mainStage);
         progressState.show();
+
+        progress.progressProperty().addListener(observable -> {
+            if (progress.getProgress() >= 1) {
+                try {
+                    processAlgorithmStage("ClickbaitGenerator.exe " + numTitles, "output", 1, progressState);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        Thread thread = new Thread(task);
+        thread.setDaemon(true);
+        thread.start();
+
+        Process process = Runtime.getRuntime().exec(cmd);
+    }
+
+    public void processAlgorithmStage(String cmd, String lookingIn, int numLooking, Stage progressState) throws IOException {
+        final Task<Void> task = new Task<Void>() {
+            File directory = new File(lookingIn);
+            int numFiles = 0;
+
+            protected Void call() throws Exception {
+                File file = new File("output/titles.txt");
+                file.delete();
+
+                while(numFiles < numLooking) {
+                    numFiles = Objects.requireNonNull(directory.list()).length;
+                    updateProgress(numFiles, numLooking + 1);
+                    Thread.sleep(1000);
+                }
+
+                Process process = Runtime.getRuntime().exec("wscript restart.vbs");
+                updateProgress(1, 1);
+                return null;
+            }
+        };
+
+
+        ProgressBar progress = new ProgressBar();
+        progress.setStyle("-fx-accent: green");
+        progress.progressProperty().bind(task.progressProperty());
+        progress.setPadding(new Insets(0, 0, 10, 0));
+        ProgressIndicator loadingIndicator = new ProgressIndicator(-1.0);
+
+
+        Label loadingLabel = new Label("Loading...");
+        Label dataLabel = new Label("Processing Data...");
+        Label blankLabel = new Label("");
+        blankLabel.setMinWidth(200);
+
+        GridPane layout = new GridPane();
+        layout.add(loadingIndicator, 0, 0);
+        layout.add(loadingLabel, 0, 1);
+        layout.add(dataLabel, 0, 2);
+        layout.add(blankLabel, 0, 3);
+        layout.add(progress, 0, 4);
+        layout.setPadding(new Insets(10, 0, 10, 0));
+        GridPane.setHalignment(loadingIndicator, HPos.CENTER);
+        GridPane.setHalignment(loadingLabel, HPos.CENTER);
+        GridPane.setHalignment(dataLabel, HPos.CENTER);
+        GridPane.setHalignment(progress, HPos.CENTER);
+
+        progressState.setScene(new Scene(layout));
 
         progress.progressProperty().addListener(observable -> {
             if (progress.getProgress() >= 1) {

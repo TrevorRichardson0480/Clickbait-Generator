@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ClickbaitGeneratorGui.iml" filepath="$PROJECT_DIR$/ClickbaitGeneratorGui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClickbaitrGeneratorGui.iml" filepath="$PROJECT_DIR$/ClickbaitrGeneratorGui.iml" />
     </modules>
   </component>
 </project>

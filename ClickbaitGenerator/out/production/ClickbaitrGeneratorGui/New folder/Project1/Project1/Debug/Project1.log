@@ -1,0 +1,5 @@
+﻿  algorithm.cpp
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Users\trevo\OneDrive\School\semester 9\COP 3530\Project 3\Clickbait-Generator\ClickbaitGenerator\src\New folder\Project1\algorithm.cpp(125,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\trevo\OneDrive\School\semester 9\COP 3530\Project 3\Clickbait-Generator\ClickbaitGenerator\src\New folder\Project1\algorithm.cpp(174,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Project1.vcxproj -> C:\Users\trevo\OneDrive\School\semester 9\COP 3530\Project 3\Clickbait-Generator\ClickbaitGenerator\src\New folder\Project1\Debug\Project1.exe
